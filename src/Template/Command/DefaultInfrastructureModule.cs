@@ -1,5 +1,4 @@
 ﻿using Autofac;
-using Autofac.Core;
 using Core.Domain.Repository;
 using MediatR;
 using MediatR.Pipeline;

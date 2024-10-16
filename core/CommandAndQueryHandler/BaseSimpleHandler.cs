@@ -1,5 +1,3 @@
-using Ardalis.Specification;
-using Core.Domain.Repository;
 using MediatR;
 
 namespace Core.CommandAndQueryHandler
@@ -10,12 +8,12 @@ namespace Core.CommandAndQueryHandler
     /// <typeparam name="TRepository">Repositorio a utilizar</typeparam>
     /// <typeparam name="TRequst">Clase comando</typeparam>
     /// <typeparam name="TResponse">Clase respuesta</typeparam>
-    public abstract class BaseSimpleHandler< TRequst, TResponse> :
+    public abstract class BaseSimpleHandler<TRequst, TResponse> :
         IRequestHandler<TRequst, TResponse>
         where TRequst : IRequest<TResponse>
         where TResponse : class
     {
-      
+
 
         /// <summary>
         /// Constructor con inyección de dependencias

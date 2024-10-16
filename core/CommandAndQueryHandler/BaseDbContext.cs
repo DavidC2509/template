@@ -2,12 +2,6 @@
 using Core.Domain.Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Core.CommandAndQueryHandler
 {
@@ -90,8 +84,8 @@ namespace Core.CommandAndQueryHandler
             }
         }
 
- 
-    
+
+
 
         /// <summary>
         /// Reemplazo del OnModelCreating, dado que se ha selleado dicho método. Todos los registrosd e entidades deberían hacerse aquí

@@ -1,12 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
-using Core.Domain.Exceptions;
 
 namespace Core.Controller
 {

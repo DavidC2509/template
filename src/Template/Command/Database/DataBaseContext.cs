@@ -1,8 +1,8 @@
 ﻿
+using Core.CommandAndQueryHandler;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
-using Core.CommandAndQueryHandler;
 using Template.Domain.ExampleAggregate;
 
 namespace Template.Command.Database

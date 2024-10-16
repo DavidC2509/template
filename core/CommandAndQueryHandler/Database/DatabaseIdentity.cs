@@ -1,16 +1,8 @@
-﻿using Core.Domain.Domain;
-using Core.Domain;
+﻿using Core.Domain;
 using MediatR;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Core.CommandAndQueryHandler;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Core.CommandAndQueryHandler.Database
 {

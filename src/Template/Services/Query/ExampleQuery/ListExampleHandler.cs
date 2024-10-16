@@ -17,7 +17,7 @@ namespace Template.Services.Query.ExampleQuery
 
         public override async Task<IEnumerable<ExampleModels>> Handle(ListExampleQuery request, CancellationToken cancellationToken)
         {
-            var list =  await _repository.ListAsync();
+            var list = await _repository.ListAsync();
             var resultMapper = _mapper.Map<List<ExampleModels>>(list);
             return resultMapper;
 

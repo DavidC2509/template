@@ -1,8 +1,6 @@
 ﻿using Core.Domain.Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Core.CommandAndQueryHandler
 {

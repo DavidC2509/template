@@ -1,11 +1,8 @@
 ﻿using Ardalis.Specification;
+using Ardalis.Specification.EntityFrameworkCore;
 using Core.Domain;
-using Core.Domain.Domain;
 using Core.Domain.Repository;
 using Microsoft.EntityFrameworkCore;
-using Ardalis.Specification.EntityFrameworkCore;
-using Core.CommandAndQueryHandler.Database;
-using Microsoft.AspNetCore.Identity;
 
 namespace Core.CommandAndQueryHandler.Repository
 {
@@ -65,9 +62,9 @@ namespace Core.CommandAndQueryHandler.Repository
         /// <returns>Retorna la entidad añadida</returns>
         public TEntity Add(TEntity entity)
         {
-                return DataSet
-                    .Add(entity)
-                    .Entity;
+            return DataSet
+                .Add(entity)
+                .Entity;
         }
 
         public virtual Task<IEnumerable<TEntity>> AddRangeAsync(IEnumerable<TEntity> entities, CancellationToken cancellationToken = default)

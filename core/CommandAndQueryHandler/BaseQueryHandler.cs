@@ -1,5 +1,4 @@
-﻿using Ardalis.Specification;
-using Core.Domain;
+﻿using Core.Domain;
 using Core.Domain.Repository;
 using MediatR;
 

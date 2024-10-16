@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MediatR;
+﻿using MediatR;
 
 namespace Core.Domain
 {
@@ -14,6 +9,6 @@ namespace Core.Domain
 
         void ClearDomainEvents();
         void ClearDomainEventsAwait();
-    
+
     }
 }

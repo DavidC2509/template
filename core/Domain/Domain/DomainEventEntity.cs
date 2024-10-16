@@ -1,12 +1,7 @@
 ﻿using Core.Domain.Events;
 using MediatR;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace Core.Domain.Domain
 {
@@ -94,7 +89,7 @@ namespace Core.Domain.Domain
 
         }
 
-  
+
 
         /// <summary>
         /// Obtiene el Código hash
@@ -115,7 +110,7 @@ namespace Core.Domain.Domain
         }
 
 
-   
+
         /// <summary>
         /// Determina los tipos de eventos sobre los que se aplicará una operación
         /// </summary>

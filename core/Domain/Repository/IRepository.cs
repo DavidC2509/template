@@ -1,17 +1,10 @@
-﻿using Ardalis.Specification;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Core.Domain.Repository
+﻿namespace Core.Domain.Repository
 {
     /// <summary>
     /// Interfaz base para las interfaces de repositorios de agregados. Trabaja sobre el root del agregado
     /// </summary>
     /// <typeparam name="TEntity">Entidad Root del agregado</typeparam>
-    public interface IRepository<TEntity> : IReadRepository<TEntity> where TEntity : class, IAggregateRoot 
+    public interface IRepository<TEntity> : IReadRepository<TEntity> where TEntity : class, IAggregateRoot
     {
         /// <summary>
         /// Objeto que implementa el patron de unidad de trabajo
