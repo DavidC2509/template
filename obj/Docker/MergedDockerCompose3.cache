@@ -1,0 +1,57 @@
+name: dockercompose7720846268311427835
+services:
+  sqldata:
+    container_name: sqldata
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: Developer
+      SA_PASSWORD: Pass@word
+    healthcheck:
+      test:
+      - CMD-SHELL
+      - /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pass@word -Q 'SELECT 1'
+        || exit 1
+      timeout: 5s
+      interval: 10s
+      retries: 5
+      start_period: 1s
+    image: mcr.microsoft.com/mssql/server:2019-CU16-GDR1-ubuntu-20.04
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "5433"
+      protocol: tcp
+    user: root
+    volumes:
+    - type: volume
+      source: template-sqldata
+      target: /var/opt/mssql/data
+      volume: {}
+  template-api:
+    build:
+      context: D:\david\TemplateProyect\Template
+      dockerfile: src/Template/Api/Dockerfile
+    container_name: template-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: development
+      ConnectionStrings__TemplateDatabase: ""
+    image: template/template.api:latest
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: "5101"
+      protocol: tcp
+    - mode: ingress
+      target: 50001
+      published: "50002"
+      protocol: tcp
+networks:
+  default:
+    name: dockercompose7720846268311427835_default
+volumes:
+  template-sqldata:
+    name: dockercompose7720846268311427835_template-sqldata
