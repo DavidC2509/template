@@ -1,5 +1,4 @@
-﻿
-using Core.CommandAndQueryHandler;
+﻿using Core.Cqrs.CommandAndQueryHandler;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;

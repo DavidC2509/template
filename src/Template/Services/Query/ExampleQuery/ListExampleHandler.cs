@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Core.CommandAndQueryHandler;
-using Core.Domain.Repository;
+using Core.Cqrs.CommandAndQueryHandler;
+using Core.Cqrs.Domain.Repository;
 using Template.Domain.ExampleAggregate;
 using Template.Services.Models;
 

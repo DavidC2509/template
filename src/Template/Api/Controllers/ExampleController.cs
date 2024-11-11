@@ -1,4 +1,4 @@
-﻿using Core.Controller;
+﻿using ControllerCqrs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Template.Services.Models;
